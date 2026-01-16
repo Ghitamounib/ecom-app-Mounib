@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h3 class="mb-3">Factures du client #{{ customerId }}</h3>
+
+  <table class="table table-bordered" *ngIf="bills && bills._embedded">
+    <thead>
+    <tr>
+      <th>Bill ID</th>
+      <th>Date</th>
+      <th>Customer ID</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let b of bills._embedded.bills">
+      <td>{{ b.id }}</td>
+      <td>{{ b.billingDate }}</td>
+      <td>{{ b.customerID }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Pour debug -->
+  <pre>{{ bills | json }}</pre>
+</div>
