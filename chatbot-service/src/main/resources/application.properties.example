@@ -1,0 +1,10 @@
+spring.application.name=chatbot-service
+server.port=8084
+
+# OpenAI Configuration
+spring.ai.openai.api-key=YOUR_OPENAI_API_KEY
+spring.ai.openai.chat.options.model=gpt-3.5-turbo
+
+# Telegram Configuration
+telegram.bot.token=YOUR_TELEGRAM_BOT_TOKEN
+telegram.bot.username=YOUR_BOT_USERNAME
